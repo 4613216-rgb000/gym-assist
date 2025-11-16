@@ -1,0 +1,46 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "api/dist/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": ["api/dist/**"]
+      }
+    },
+    {
+      "src": "dist/**",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/dist/index.js"
+    },
+    {
+      "src": "/metrics",
+      "dest": "/api/dist/index.js"
+    },
+    {
+      "src": "/health",
+      "dest": "/api/dist/index.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/dist/$1"
+    },
+    {
+      "src": "/",
+      "dest": "/dist/index.html"
+    }
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "api/dist/index.js": {
+      "maxDuration": 30
+    }
+  }
+}
