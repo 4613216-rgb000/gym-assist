@@ -260,3 +260,5 @@ V1.0 关注“能用且清晰”，后续将迭代：周起始可配置、关键
     - 本地：`timeLocalISO = 2025-11-23T15:00:00+08:00`
     - UTC：`timeUTCISO = 2025-11-23T07:00:00.000Z`
     - 页面：周列表显示 `2025/11/23 15:00`，无跨日到周一的现象。
+    - 
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/4613216-rgb000/gym-assist?utm_source=oss&utm_medium=github&utm_campaign=4613216-rgb000%2Fgym-assist&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
